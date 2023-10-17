@@ -34,9 +34,9 @@
 // Execute `rustlings hint tests7` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
-fn main() {}
+fn main() {
+    include!(concat!(env!("TEST_FOO"), "1"));
+}
 
 #[cfg(test)]
 mod tests {
@@ -50,6 +50,7 @@ mod tests {
             .as_secs();
         let s = std::env::var("TEST_FOO").unwrap();
         let e: u64 = s.parse().unwrap();
+        println!("{}", e);
         assert!(timestamp >= e && timestamp < e + 10);
     }
 }
