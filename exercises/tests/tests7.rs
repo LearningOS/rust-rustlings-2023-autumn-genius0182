@@ -35,7 +35,7 @@
 // hint.
 
 fn main() {
-    include!(concat!(env!("TEST_FOO"), "1"));
+    env!("TEST_FOO");
 }
 
 #[cfg(test)]

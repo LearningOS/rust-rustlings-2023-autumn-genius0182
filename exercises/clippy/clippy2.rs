@@ -9,8 +9,8 @@ fn main() {
     // for x in option {
     //     res += x;
     // }
-    while let Some(top) = option {
-        res += top;
+    if let Some(x) = option {
+        res += x;
     }
     println!("{}", res);
 }
